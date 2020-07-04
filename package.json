@@ -1,0 +1,25 @@
+{
+  "name": "reagerejs",
+  "version": "1.0.0",
+  "description": "Um sistema reativo completo que utiliza Socket.IO, no back-end, e ReactJS+, no front-end, para criação de aplicações web dinâmicas e reativas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DennisWilton/ReagereJS.git"
+  },
+  "keywords": [
+    "Reactive",
+    "ReactJS",
+    "SocketIO",
+    "RealTime"
+  ],
+  "author": "DenisAzevedo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DennisWilton/ReagereJS/issues"
+  },
+  "homepage": "https://github.com/DennisWilton/ReagereJS#readme"
+}
