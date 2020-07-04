@@ -1,0 +1,20 @@
+{
+    "home": {
+        "name": "Início",
+        "private": true
+    },
+    "landing": {
+        "name": "Página inicial"
+    },
+    "404": {
+        "name": "404 - Página não encontrada!"
+    },
+    "300": { "name": "300 - Não autenticado!"},
+    "changePassword": {
+        "private": true
+    },
+    "dashboard": {
+        "isPrivate": true,
+        "private": true
+    }
+}
