@@ -1,24 +1,26 @@
-const uuid = require('uuid');
+const Module = require('../Module');
+const USER = require('./User.model');
+const jwt = require('jsonwebtoken');
+const { secret } = require('../../config.json');
+const checkToken = require('../Auth/checkToken');
 
-function User(){
-    this.user = {}
-    const {client, io, user} = this;
-    
-    client.on('USER.LOGIN', (data = {}) => {
-        
-        const {credentials} = data;
+function User(props){
+    Module.call(this, "User");
+    Object.assign(this, props.previousData, {instance: props.instance});
+}
 
-        client.emit('USER.DATA', {...this.user});
-    });
+Object.assign(User.prototype, Module.prototype);
 
-    client.on('USER.LOGOUT', (data) => {
-        user.isLogged = false;
-        this.navigation.go('landing');
-    });
+User.prototype.init = function(){
+    if(!this.isGuest){
+        console.log("Is not guest");
+    } else {
+        console.log("Is guest");
+    }
+}
 
-    client.on('USER.CHANGEPASSWORD', (data) => {
-        this.navigation.go('changePassword');
-    });
+User.prototype.say = function(message){
+    console.log(`${this.username || "Visitante" } says: ${message}`)
 }
 
 
